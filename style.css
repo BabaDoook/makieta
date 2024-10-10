@@ -1,0 +1,330 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header, #sticky-header {
+    background: #1a472a;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    position: relative;
+}
+header::after, #sticky-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.5;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header li {
+    float: right;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+header #branding .highlight {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+header #branding .name {
+    color: #FFECC8;
+    font-weight: 100;
+    font-size: 20px;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+@media(max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header #branding h1 {
+        margin-bottom: 10px;
+    }
+}
+#showcase {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#showcase .header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#showcase .adwokatura-logo {
+    position: absolute;
+    right: 5%;
+    bottom: 1%;
+    max-width: 15%;
+    height: auto;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    #showcase .adwokatura-logo {
+        max-width: 25%;
+        right: 3%;
+        bottom: 2%;
+    }
+}
+#showcase::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
+}
+#main {
+    position: relative;
+    z-index: 1;
+    padding: 30px 0;
+    background: #fff;
+    padding-top: 20px;
+    box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+#main h2 {
+    color: #1a472a;
+}
+footer {
+    padding: 20px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    background-color: #1a472a;
+    text-align: center;
+}
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+footer .policy-links {
+    font-size: 0.5em;
+    margin-top: 10px;
+}
+footer .policy-links a {
+    color: #ffffff;
+    font-weight: 300;
+}
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+}
+.contact-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 2%;
+}
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2%;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    .contact-info, .contact-image {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact-image {
+        height: 300px;
+    }
+}
+#sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease-in-out;
+}
+#sticky-header.scrolled {
+    padding: 10px 0;
+}
+#sticky-header.scrolled #branding h1 {
+    font-size: 18px;
+}
+#sticky-header.scrolled nav ul li {
+    padding: 0 10px;
+}
+#sticky-header #branding h1, 
+#sticky-header nav ul li a {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.contact-info a {
+    color: #000000;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.map-container {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+.map-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 3;
+}
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+.header-image {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.header-image .header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.header-image .container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#branding h1, nav ul li a {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.shadow-divider {
+    height: 20px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 75%);
+    margin: 40px 0;
+}
+.contact-section {
+    background: transparent;
+}
+#main, #contact {
+    background-color: #ffffff;
+}
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+header nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    font-weight: normal;
+}
+header nav ul li a:hover {
+    color: #FFECC8;
+    font-weight: normal;
+}
+#sticky-header nav ul li a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-weight: normal;
+}
+#sticky-header nav ul li a:hover {
+    color: #FFECC8;
+    font-weight: normal;
+}
+.desktop-only-image {
+    display: block;
+}
+@media (max-width: 768px) {
+    .desktop-only-image {
+        display: none;
+    }
+}
+h2 {
+    font-family: Arial, sans-serif;
+    color: #1a472a;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#about, #contact {
+    padding-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+.unclickable-email {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+}
